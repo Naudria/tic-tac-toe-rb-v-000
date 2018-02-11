@@ -109,15 +109,9 @@ WIN_COMBINATIONS = [
     board.none? {|i| i == "" || i == " "}
   end
 
-def draw?(board)
-  if !won?(board) && full?(board)
-    return true
-  elsif !won?(board) && !full?(board)
-    return false
-  else won?(board)
-    return false
+  def draw?(board)
+     won?(board) == nil && full?(board) == true
   end
-end
 
 def over?(board)
   if draw?(board) || won?(board) || full?(board)
