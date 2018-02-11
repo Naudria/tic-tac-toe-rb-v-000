@@ -1,3 +1,12 @@
+
+require_relative '../lib/tic_tac_toe'
+
+puts "Welcome to Tic Tac Toe!"
+  board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+  play(board)
+
+  _______________________________________________________
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
