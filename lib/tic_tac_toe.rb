@@ -105,9 +105,9 @@ WIN_COMBINATIONS = [
     end
   end
 
-def full?(board)
-board.all?{|i| i == "X" || i == "O"}
-end
+  def full?(board)
+    board.none? {|i| i == "" || i == " "}
+  end
 
 def draw?(board)
   if !won?(board) && full?(board)
